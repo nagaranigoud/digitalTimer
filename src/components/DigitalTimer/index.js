@@ -22,14 +22,14 @@ class DigitalTimer extends Component {
     const {timerLimitInMinutes} = this.state
 
     if (timerLimitInMinutes > 1) {
-      this.setstate(prevState => ({
+      this.setState(prevState => ({
         timerLimitInMinutes: prevState.timerLimitInMinutes - 1,
       }))
     }
   }
 
   onIncreaseTimerLimitInMinutes = () =>
-    this.setstate(prevState => ({
+    this.setState(prevState => ({
       timerLimitInMinutes: prevState.timerLimitInMinutes + 1,
     }))
 
@@ -41,14 +41,14 @@ class DigitalTimer extends Component {
       <div className="timer-limit-controller-container">
         <p className="limit-label">Set Timer limit</p>
         <div className="timer-limit-controller">
-          <buttton
+          <button
             className="limit-controller-button"
             disabled={isButtonsDisabled}
             onClick={this.onDecreaseTimerLimitInMinutes}
             type="button"
           >
             -
-          </buttton>
+          </button>
           <div className="limit-label-and-value-container">
             <p className="limit-value">{timerLimitInMinutes}</p>
           </div>
