@@ -85,11 +85,8 @@ class DigitalTimer extends Component {
   }
 
   onStartOrPauseTimer = () => {
-    const {
-      isTimerRunning,
-      timeElapsedInSeconds,
-      timerLimitInMinutes,
-    } = this.state
+    const {isTimerRunning, timeElapsedInSeconds, timerLimitInMinutes} =
+      this.state
     const isTimerCompleted = timeElapsedInSeconds === timerLimitInMinutes * 60
 
     if (isTimerCompleted) {
